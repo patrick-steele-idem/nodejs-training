@@ -1,0 +1,19 @@
+{
+  "name": "app1",
+  "version": "0.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "express": "~3.4.8",
+    "jquery": "~2.1.0",
+    "hot-reload-browser-refresh": "~0.1.1",
+    "app-module-path": "~0.3.0-beta",
+    "raptor-widgets": "~0.2.0-beta",
+    "raptor-logging": "~0.2.0-beta"
+  }
+}

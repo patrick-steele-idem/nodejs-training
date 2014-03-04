@@ -1,0 +1,34 @@
+<!doctype html>
+
+<optimizer:page name="test" package-path="./optimizer.json"/>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Page</title>
+    <optimizer:head/>
+</head>
+<body>
+    Test Page! HELLO WORLD
+
+    <ul id="list">
+        <li c:for="color in data.colors">
+            $color
+        </li>
+    </ul>
+
+    <app:button label="Hello World TEST" class="my-button" style="border: 2px solid Red"/>
+
+    <app:button label="Button 2" class="my-button" style="border: 2px solid Red"/>
+
+    <app:button label="Button 3" class="my-button" style="border: 2px solid Red"/>
+
+
+    <optimizer:body/>
+
+    <w:init-widgets/>
+
+    <hot-reload:refresh enabled="true"/>
+
+</body>
+</html>

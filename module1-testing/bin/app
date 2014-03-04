@@ -1,0 +1,4 @@
+#!/usr/bin/env node
+
+var argv = process.argv;
+console.log('module1 says hello! ', argv);

@@ -1,0 +1,6 @@
+{
+    "namespace": "app",
+    "tags": {
+        "button": "./components/button/raptor-tag.json"
+    }
+}

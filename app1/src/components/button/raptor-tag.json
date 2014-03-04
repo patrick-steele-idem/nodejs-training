@@ -1,0 +1,7 @@
+{
+    "renderer": "./renderer.js",
+    "attributes": {
+        "label": "string",
+        "*": "string"
+    }
+}

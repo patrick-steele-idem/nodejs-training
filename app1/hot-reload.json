@@ -1,0 +1,17 @@
+{
+    "watch": [
+        "config/",
+        "src/",
+        "routes.js",
+        "package.json"
+    ],
+    "logging-enabled": true,
+    "restart": true,
+    "plugins": {
+        "hot-reload-browser-refresh": {
+            "enabled": true,
+            "port": 9000,
+            "ready-event": "online"
+        }
+    }
+}

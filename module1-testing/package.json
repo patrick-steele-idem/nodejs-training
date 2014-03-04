@@ -1,0 +1,21 @@
+{
+  "name": "module1",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "bin": {
+    "module1": "bin/app"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "mocha": "~1.17.1",
+    "chai": "~1.9.0",
+    "jshint": "~2.4.4",
+    "istanbul": "~0.2.4",
+    "mocha-istanbul": "~0.2.0"
+  }
+}

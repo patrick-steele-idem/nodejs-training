@@ -1,0 +1,8 @@
+{
+    "dependencies": [
+        "./test.css",
+        "require jquery",
+        "require raptor-widgets",
+        "components/button"
+    ]
+}
