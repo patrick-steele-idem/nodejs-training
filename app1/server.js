@@ -12,7 +12,7 @@ var customMiddleware = function(req, res, next) {
     next();
 };
 
-require('raptor-optimizer').configureDefault({
+require('raptor-optimizer').configure({
     "bundlingEnabled": true,
     // "fileWriter": {
     //     "outputDir": nodePath.join(__dirname, 'build'),

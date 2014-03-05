@@ -14,6 +14,9 @@
     "hot-reload-browser-refresh": "~0.1.1",
     "app-module-path": "~0.3.0-beta",
     "raptor-widgets": "~0.2.0-beta",
-    "raptor-logging": "~0.2.0-beta"
+    "raptor-logging": "~0.2.0-beta",
+    "request": "^2.34.0",
+    "async": "^0.2.10",
+    "q": "^1.0.0"
   }
 }

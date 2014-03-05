@@ -1,4 +1,8 @@
 exports.addRoutes = function(app) {
-    app.get('/', require('./src/pages/index'));
+    // Services:
+    app.use('/services', require('./src/services'));
+
+    // Pages:
     app.get('/test', require('./src/pages/test')); 
+    app.get('/', require('./src/pages/index'));
 };
