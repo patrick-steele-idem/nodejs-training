@@ -1,3 +1,7 @@
-<button type="button" c:attrs="data.attrs" w:widget="./widget">
-    $data.label
-</button>
+<div w:widget="./widget">
+    BEGIN BUTTON
+    <button type="button" c:attrs="data.attrs" w:el-id="button">
+        $data.label
+    </button>
+    <app:foo/>
+</div>

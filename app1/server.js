@@ -13,6 +13,9 @@ var customMiddleware = function(req, res, next) {
 };
 
 require('raptor-optimizer').configure({
+    plugins: {
+        'raptor-optimizer-require': {}
+    },
     "bundlingEnabled": true,
     // "fileWriter": {
     //     "outputDir": nodePath.join(__dirname, 'build'),
@@ -25,7 +28,7 @@ require('raptor-optimizer').configure({
 
 app.use(customMiddleware);
 
-app.use('/static', express.static(__dirname + '/build'));
+app.use('/static', express.static(__dirname + '/static'));
 
 require('./routes').addRoutes(app);
 

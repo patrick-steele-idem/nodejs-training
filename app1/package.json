@@ -17,6 +17,8 @@
     "raptor-logging": "~0.2.0-beta",
     "request": "^2.34.0",
     "async": "^0.2.10",
-    "q": "^1.0.0"
+    "q": "^1.0.0",
+    "raptor-optimizer-require": "^0.1.6-beta",
+    "passport": "^0.2.0"
   }
 }
