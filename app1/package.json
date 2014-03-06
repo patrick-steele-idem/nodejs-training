@@ -21,6 +21,7 @@
     "raptor-optimizer-require": "^0.1.6-beta",
     "passport": "^0.2.0",
     "raptor-optimizer": "^0.2.14-beta",
-    "raptor-templates": "^0.2.6-beta"
+    "raptor-templates": "^0.2.6-beta",
+    "raptor-optimizer-taglib": "^0.1.5-beta"
   }
 }
