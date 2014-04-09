@@ -4,7 +4,7 @@
 /.idea/
 **/npm-debug.log
 **/node_modules
-/*.sublime-workspace
+*.sublime-workspace
 *.orig
 .DS_Store
 **/lib_cov

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><layout:placeholder name="title"/></title>
+    <optimizer:head/>
+</head>
+<body>
+    <h1><layout:placeholder name="title"/></h1>
+    <div class="body">
+        <layout:placeholder name="body"/>
+    </div>
+    <div class="sidebar">
+        <layout:placeholder name="sidebar"/>
+    </div>
+    
+    <optimizer:body/>
+    
+    <browser-refresh:refresh enabled="true"/>
+</body>
+</html>
