@@ -1,0 +1,35 @@
+{
+  "name": "raptorjs-express-app",
+  "version": "0.0.0",
+  "description": "Sample Express-based server app that integrates various RaptorJS modules (including raptor-templates, raptor-optimizer and raptor-widgets)",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raptorjs3/samples.git"
+  },
+  "author": "Patrick Steele-idem <pnidem@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raptorjs3/samples/issues"
+  },
+  "homepage": "https://github.com/raptorjs3/samples",
+  "dependencies": {
+    "express": "^3.5.1",
+    "raptor-optimizer": "^0.2.33-beta",
+    "raptor-templates": "^0.2.20-beta",
+    "raptor-args": "^0.1.12-beta",
+    "view-engine": "^0.1.2-beta",
+    "view-engine-raptor": "^0.1.2-beta",
+    "browser-refresh": "^0.1.0-beta",
+    "raptor-optimizer-taglib": "^0.1.11-beta",
+    "bootstrap": "https://github.com/twbs/bootstrap/tarball/v3.1.1",
+    "raptor-widgets": "^0.2.7-beta",
+    "raptor-renderer": "^0.2.3-beta",
+    "jquery": "^2.1.0",
+    "raptor-util": "^0.2.1-beta",
+    "minimatch": "^0.2.14"
+  }
+}

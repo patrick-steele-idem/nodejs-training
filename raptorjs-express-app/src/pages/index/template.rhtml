@@ -1,0 +1,40 @@
+<optimizer:page name="index" package-path="./optimizer.json" />
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index | raptorjs-express-app</title>
+    <optimizer:head/>
+</head>
+<body>
+    <h1 c:if="data.count !== 0">
+        Hello $data.name! You have $data.count new messages.    
+    </h1>
+
+    <app:hello name="World"/>
+    <app:hello name="John"/>
+    <app:hello name="Frank"/>
+    
+    <app:button label="Test Button" variant="warning"/>
+
+    <div class="section box">
+        <div class="box-shadow">
+            <app:search-form/>
+            <app:search-form/>
+            <app:search-form/>
+        </div>
+    </div>
+
+    <ul>
+        <li c:for="color in data.colors" style="background-color: ${color}">$color</li>
+    </ul>
+
+    <optimizer:body/>
+
+    <w:init-widgets/>
+
+    <browser-refresh:refresh enabled="true"/>
+
+</body>
+</html>
