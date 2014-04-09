@@ -4,6 +4,14 @@
     <layout:put into="title">Chickens!</layout:put>
     <layout:put into="body">
         Available Chickens
+        <!-- <async:fragment data-provider="allChickens" var="chickens">
+            <ul>
+                <li c:for="chicken in chickens.searchResults">
+                    ${chicken.type}
+                </li>
+            </ul>
+        </async:fragment> -->
+        
         <ul>
             <li c:for="chicken in data.chickens.searchResults">
                 ${chicken.type}

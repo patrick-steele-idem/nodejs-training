@@ -1,3 +1,5 @@
+var raptorDataProviders = require('raptor-data-providers');
+
 var raptorTemplates = require('raptor-templates');
 var chickensService = require('../../services/chickens-service');
 
@@ -18,6 +20,22 @@ module.exports = function(req, res) {
     //         });
     //         
     //         
+    
+    // var context = raptorTemplates.createContext(res);
+
+    // raptorDataProviders.register({
+    //     allChickens: function(args, callback) {
+    //         chickensService.getAllChickens(callback);
+    //     }
+    // }, context);
+
+    // raptorTemplates
+    //     .render(
+    //         templatePath,
+    //         {},
+    //         context);
+
+    // context.end();
 
     chickensService.getAllChickens(function(err, chickens) {
         raptorTemplates
@@ -28,6 +46,4 @@ module.exports = function(req, res) {
                 })
             .pipe(res);
     });
-
-    
 };
