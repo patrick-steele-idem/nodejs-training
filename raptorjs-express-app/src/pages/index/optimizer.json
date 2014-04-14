@@ -4,8 +4,8 @@
         "require raptor-widgets",
         "../../global-style",
         "style.less",
-        "../../components/button",
-        "../../components/search-form",
-        "../../components/hello"
+        "../../components/app-button",
+        "../../components/app-search-form",
+        "../../components/app-hello"
     ]
 }
