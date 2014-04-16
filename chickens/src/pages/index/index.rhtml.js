@@ -1,27 +1,29 @@
-module.exports = function create(helpers) {
-  var empty = helpers.e,
-      notEmpty = helpers.ne,
+module.exports = function create(__helpers) {
+  var empty = __helpers.e,
+      notEmpty = __helpers.ne,
       raptor_optimizer_taglib_page_tag = require("raptor-optimizer-taglib/page-tag"),
       raptor_templates_taglibs_layout_UseTag = require("raptor-templates/taglibs/layout/UseTag"),
       raptor_templates_taglibs_layout_PutTag = require("raptor-templates/taglibs/layout/PutTag"),
-      forEach = helpers.f,
-      escapeXml = helpers.x;
+      components_app_hello_renderer = require("../../components/app-hello/renderer"),
+      raptor_templates_taglibs_async_async_fragment_tag = require("raptor-templates/taglibs/async/async-fragment-tag"),
+      forEach = __helpers.f,
+      escapeXml = __helpers.x;
 
   return function render(data, context) {
-    helpers.t(context, 
+    __helpers.t(context, 
       raptor_optimizer_taglib_page_tag,
       {
         "name": "index",
         "packagePath": "./optimizer.json",
         "dirname": __dirname
       });
-    helpers.t(context, 
+    __helpers.t(context, 
       raptor_templates_taglibs_layout_UseTag,
       {
         "template": require.resolve("../../layouts/default-layout.rhtml")
       },
       function(_layout) {
-        helpers.t(context, 
+        __helpers.t(context, 
           raptor_templates_taglibs_layout_PutTag,
           {
             "into": "title",
@@ -30,24 +32,39 @@ module.exports = function create(helpers) {
           function() {
             context.w('Chickens!');
           });
-        helpers.t(context, 
+        __helpers.t(context, 
           raptor_templates_taglibs_layout_PutTag,
           {
             "into": "body",
             "_layout": _layout
           },
           function() {
-            context.w('Available Chickens <ul>');
+            context.w('<hr>');
+            __helpers.t(context, 
+              components_app_hello_renderer,
+              {
+                "name": "Frank"
+              });
 
-            forEach(data.chickens.searchResults, function(chicken) {
-              context.w('<li>' +
-                escapeXml(chicken.type) +
-                '</li>');
-            });
+            context.w('<hr> Available Chickens ');
+            __helpers.t(context, 
+              raptor_templates_taglibs_async_async_fragment_tag,
+              {
+                "dataProvider": "allChickens"
+              },
+              function(context,chickens) {
+                context.w('<ul>');
 
-            context.w('</ul>');
+                forEach(chickens.searchResults, function(chicken) {
+                  context.w('<li>' +
+                    escapeXml(chicken.type) +
+                    ' - TEST</li>');
+                });
+
+                context.w('</ul>');
+              });
           });
-        helpers.t(context, 
+        __helpers.t(context, 
           raptor_templates_taglibs_layout_PutTag,
           {
             "into": "sidebar",

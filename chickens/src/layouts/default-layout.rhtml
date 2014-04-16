@@ -2,20 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title><layout:placeholder name="title"/></title>
-    <optimizer:head/>
+    <title><layout-placeholder name="title"/></title>
+    <optimizer-head/>
 </head>
 <body>
-    <h1><layout:placeholder name="title"/></h1>
+    <h1><layout-placeholder name="title"/></h1>
+
+    <async-fragment data-provider="userProfile" var="userProfile">
+        <div c-if="userProfile.isLoggedIn">
+            Welcome back, ${userProfile.name}!
+        </div>
+        <div c-else>
+            <a href="#">Login</a>
+        </div>
+    </async-fragment>
+
     <div class="body">
-        <layout:placeholder name="body"/>
+        <layout-placeholder name="body"/>
     </div>
     <div class="sidebar">
-        <layout:placeholder name="sidebar"/>
+        <layout-placeholder name="sidebar"/>
     </div>
     
-    <optimizer:body/>
+    <optimizer-body/>
+
+    <w-init-widgets />
     
-    <browser-refresh:refresh enabled="true"/>
+    <browser-refresh enabled="true"/>
 </body>
 </html>

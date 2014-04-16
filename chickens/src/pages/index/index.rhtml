@@ -1,24 +1,29 @@
-<optimizer:page name="index" package-path="./optimizer.json"/>
+<optimizer-page name="index" package-path="./optimizer.json"/>
 
-<layout:use template="../../layouts/default-layout.rhtml">
-    <layout:put into="title">Chickens!</layout:put>
-    <layout:put into="body">
+<layout-use template="../../layouts/default-layout.rhtml">
+    <layout-put into="title">Chickens!</layout-put>
+    <layout-put into="body">
+
+        <hr>
+        <app-hello name="Frank"/>
+        <hr>
+
         Available Chickens
-        <!-- <async:fragment data-provider="allChickens" var="chickens">
+        <async-fragment data-provider="allChickens" var="chickens">
             <ul>
-                <li c:for="chicken in chickens.searchResults">
-                    ${chicken.type}
+                <li c-for="chicken in chickens.searchResults">
+                    ${chicken.type} - TEST
                 </li>
             </ul>
-        </async:fragment> -->
+        </async-fragment>
         
-        <ul>
-            <li c:for="chicken in data.chickens.searchResults">
+        <!-- <ul>
+            <li c-for="chicken in data.chickens.searchResults">
                 ${chicken.type}
             </li>
-        </ul>
-    </layout:put>
-    <layout:put into="sidebar">
+        </ul> -->
+    </layout-put>
+    <layout-put into="sidebar">
         Act Fast!
-    </layout:put>
-</layout:use>
+    </layout-put>
+</layout-use>

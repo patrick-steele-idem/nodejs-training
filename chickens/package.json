@@ -8,8 +8,9 @@
     "raptor-templates": "^0.2.28-beta",
     "browser-refresh": "^0.1.0-beta",
     "raptor-data-providers": "^0.2.1-beta",
-    "raptor-optimizer": "^0.2.39-beta",
-    "raptor-optimizer-taglib": "^0.1.12-beta"
+    "raptor-optimizer": "^0.2.41-beta",
+    "raptor-optimizer-taglib": "^0.1.15-beta",
+    "raptor-widgets": "^0.2.10-beta"
   },
   "devDependencies": {},
   "scripts": {

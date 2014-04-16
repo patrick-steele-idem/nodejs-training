@@ -1,10 +1,12 @@
 var express = require('express');
 var app = express();
+var raptorDataProviders = require('raptor-data-providers');
+var chickensService = require('./src/services/chickens-service');
 
 require('raptor-optimizer').configure({
-    bundlingEnabled: false,
+    bundlingEnabled: true,
     fileWriter: {
-        checksumsEnabled: false
+        checksumsEnabled: true
     }
 });
 
@@ -13,6 +15,12 @@ var port = 8080;
 app.use('/static', express.static(__dirname + '/static'));
 
 require('./routes')(app);
+
+raptorDataProviders.register({
+    allChickens: function(args, callback) {
+        chickensService.getAllChickens(callback);
+    }
+});
 
 app.listen(port, function() {
     console.log('Listening on port %d', port);

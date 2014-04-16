@@ -1,12 +1,11 @@
 var raptorDataProviders = require('raptor-data-providers');
-
 var raptorTemplates = require('raptor-templates');
-var chickensService = require('../../services/chickens-service');
-
 var templatePath = require.resolve('./index.rhtml');
 // var templatePath = require('path').join(__dirname, 'index.rhtml');
 
 module.exports = function(req, res) {
+
+    require('./test').sayHello('John');
 
     // Less efficient non-streaming usage:
     // raptorTemplates
@@ -21,29 +20,35 @@ module.exports = function(req, res) {
     //         
     //         
     
-    // var context = raptorTemplates.createContext(res);
+    var context = raptorTemplates.createContext(res);
 
-    // raptorDataProviders.register({
-    //     allChickens: function(args, callback) {
-    //         chickensService.getAllChickens(callback);
-    //     }
-    // }, context);
+    raptorDataProviders.register({
+        userProfile: function(args, callback) {
+            setTimeout(function() {
+                callback(null, {
+                    name: 'John Doe',
+                    age: 30,
+                    isLoggedIn: true
+                });
+            }, 1000);
+        }
+    }, context);
 
-    // raptorTemplates
-    //     .render(
-    //         templatePath,
-    //         {},
-    //         context);
+    raptorTemplates
+        .render(
+            templatePath,
+            {},
+            context);
 
-    // context.end();
+    context.end();
 
-    chickensService.getAllChickens(function(err, chickens) {
-        raptorTemplates
-            .stream(
-                templatePath,
-                {
-                    chickens: chickens
-                })
-            .pipe(res);
-    });
+    // chickensService.getAllChickens(function(err, chickens) {
+    //     raptorTemplates
+    //         .stream(
+    //             templatePath,
+    //             {
+    //                 chickens: chickens
+    //             })
+    //         .pipe(res);
+    // });
 };
