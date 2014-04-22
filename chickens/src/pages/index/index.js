@@ -30,7 +30,7 @@ module.exports = function(req, res) {
                     age: 30,
                     isLoggedIn: true
                 });
-            }, 1000);
+            }, 10);
         }
     }, context);
 

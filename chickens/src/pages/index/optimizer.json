@@ -1,6 +1,7 @@
 {
     "dependencies": [
         "style.css",
-        "../../components/app-hello/optimizer.json"
+        "../../components/app-hello/optimizer.json",
+        "../../components/app-simple"
     ]
 }

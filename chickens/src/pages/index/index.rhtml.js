@@ -5,6 +5,7 @@ module.exports = function create(__helpers) {
       raptor_templates_taglibs_layout_UseTag = require("raptor-templates/taglibs/layout/UseTag"),
       raptor_templates_taglibs_layout_PutTag = require("raptor-templates/taglibs/layout/PutTag"),
       components_app_hello_renderer = require("../../components/app-hello/renderer"),
+      components_app_simple_renderer = require("../../components/app-simple/renderer"),
       raptor_templates_taglibs_async_async_fragment_tag = require("raptor-templates/taglibs/async/async-fragment-tag"),
       forEach = __helpers.f,
       escapeXml = __helpers.x;
@@ -44,6 +45,21 @@ module.exports = function create(__helpers) {
               components_app_hello_renderer,
               {
                 "name": "Frank"
+              });
+            __helpers.t(context, 
+              components_app_simple_renderer,
+              {
+                "name": "John"
+              });
+            __helpers.t(context, 
+              components_app_simple_renderer,
+              {
+                "name": "Jane"
+              });
+            __helpers.t(context, 
+              components_app_simple_renderer,
+              {
+                "name": "Bob"
               });
 
             context.w('<hr> Available Chickens ');

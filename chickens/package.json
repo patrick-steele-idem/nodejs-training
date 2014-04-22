@@ -10,7 +10,10 @@
     "raptor-data-providers": "^0.2.1-beta",
     "raptor-optimizer": "^0.2.41-beta",
     "raptor-optimizer-taglib": "^0.1.15-beta",
-    "raptor-widgets": "^0.2.10-beta"
+    "raptor-widgets": "^0.2.10-beta",
+    "jquery": "^2.1.0",
+    "view-engine": "^0.1.3-beta",
+    "view-engine-raptor": "^0.1.3-beta"
   },
   "devDependencies": {},
   "scripts": {

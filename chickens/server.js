@@ -3,6 +3,16 @@ var app = express();
 var raptorDataProviders = require('raptor-data-providers');
 var chickensService = require('./src/services/chickens-service');
 
+
+require('view-engine').configure({
+    engines: {
+        'view-engine-raptor': {
+            extensions: ['rhtml']
+            // Any additional config...
+        }
+    }
+});
+
 require('raptor-optimizer').configure({
     bundlingEnabled: true,
     fileWriter: {
